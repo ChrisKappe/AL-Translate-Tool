@@ -10,6 +10,7 @@ table 78604 "BAC Translation Notes"
             DataClassification = AccountData;
             Caption = 'Project Code';
         }
+
         field(20; "Trans-Unit Id"; Text[250])
         {
             DataClassification = AccountData;

@@ -3,7 +3,7 @@ xmlport 78601 "BAC Export Translation Target"
     Caption = 'Export Translation Target';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Export;
-    Encoding = UTF16;
+    Encoding = UTF8;
     XmlVersionNo = V10;
     Format = Xml;
     PreserveWhiteSpace = true;
@@ -90,7 +90,7 @@ xmlport 78601 "BAC Export Translation Target"
                             {
                                 XmlName = 'source';
                             }
-/*                            
+
                             tableelement(note; "BAC Translation Notes")
                             {
                                 LinkTable = Target;
@@ -105,36 +105,47 @@ xmlport 78601 "BAC Export Translation Target"
                                 fieldattribute(priority; note.Priority)
                                 {
                                 }
+                                fieldattribute(note; note.Note)
+                                {
+
+                                }
                             }
-*/
-                            textelement(note)
+
+                            /*textelement(note)
                             {
-                                textattribute(from)
-                                {
-                                    trigger OnBeforePassVariable()
-                                    begin
-                                        from:=TransNotes.From;
-                                    end;
-                                }
-                                textattribute(annotates)
-                                {
-                                    trigger OnBeforePassVariable()
-                                    begin
-                                        annotates:=TransNotes.Annotates;
-                                    end;
-                                }
-                                textattribute(priority)
-                                {
-                                    trigger OnBeforePassVariable()
-                                    begin
-                                        priority:=TransNotes.Priority;
-                                    end;
-                                }
                                 trigger OnAfterAssignVariable()
                                 begin
-                                    note:=TransNotes.Note;
+                                    
                                 end;
-                            }
+                                   textattribute(from)
+                                    {
+                                        trigger OnBeforePassVariable()
+                                        begin
+                                            from := note.From;
+                                        end;
+                                    }
+                                    textattribute(annotates)
+                                    {
+                                        trigger OnBeforePassVariable()
+                                        begin
+                                            annotates := note.Annotates;
+                                        end;
+                                    }
+                                    textattribute(priority)
+                                    {
+                                        trigger OnBeforePassVariable()
+                                        begin
+                                            priority := note.Priority;
+                                        end;
+
+                                    }
+                                    trigger OnBeforePassField()
+                                    var
+                                        myInt: Integer;
+                                    begin
+                                        note.Note := 'HEllo World';
+                                    end;
+                            }*/
 
                             fieldelement(Target; Target.Target)
                             {

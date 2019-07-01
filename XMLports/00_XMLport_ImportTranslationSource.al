@@ -96,7 +96,6 @@ xmlport 78600 "BAC Import Translation Source"
                                     trigger OnAfterAssignVariable()
                                     begin
                                         TransNotes.From := from;
-                                        CreateTranNote();
                                     end;
                                 }
                                 textattribute(annotates)

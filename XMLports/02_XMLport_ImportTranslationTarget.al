@@ -4,6 +4,7 @@ xmlport 78602 "BAC Import Translation Target"
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
+    FileName = 'C:\Users\Peikba\Desktop\ManPlus.xml';
     XmlVersionNo = V10;
     Format = Xml;
     PreserveWhiteSpace = true;
@@ -16,30 +17,48 @@ xmlport 78602 "BAC Import Translation Target"
         {
             textattribute(version)
             {
+                trigger OnAfterAssignVariable()
+                begin
+                    TransProject."Xliff Version" := version;
+                end;
             }
             textelement(infile)
             {
                 XmlName = 'file';
                 textattribute(datatype)
                 {
+                    trigger OnAfterAssignVariable()
+                    begin
+                        TransProject."File Datatype" := datatype;
+                    end;
+
                 }
                 textattribute("source-language")
                 {
+                    trigger OnAfterAssignVariable()
+                    var
+                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3';
+                    begin
+                        if TransProject."Source Language ISO code" <> "source-language" then
+                            error(WrongSourceLangTxt, TransProject.FieldCaption("Source Language"), TransProject."Source Language ISO code", "source-language");
+                    end;
+
                 }
                 textattribute("target-language")
                 {
-                    trigger OnAfterAssignVariable()
-                    begin
-                        Target.TestField("Target Language ISO code", TargetLangCode);
-                    end;
                 }
                 textattribute(original)
                 {
+                    trigger OnAfterAssignVariable()
+                    begin
+                        TransProject.OrginalAttr := original;
+                    end;
                 }
                 textelement(body)
                 {
                     textelement(group)
                     {
+
                         textattribute(id1)
                         {
                             XmlName = 'id';
@@ -53,10 +72,19 @@ xmlport 78602 "BAC Import Translation Target"
                             }
                             textattribute("size-unit")
                             {
+                                trigger OnAfterAssignVariable()
+                                begin
+                                    Target."size-unit" := "size-unit";
+                                end;
                             }
                             textattribute(translate)
                             {
+                                trigger OnAfterAssignVariable()
+                                begin
+                                    Target.TranslateAttr := translate;
+                                end;
                             }
+
                             fieldelement(source; Target.Source)
                             {
                             }
@@ -68,7 +96,6 @@ xmlport 78602 "BAC Import Translation Target"
                                     trigger OnAfterAssignVariable()
                                     begin
                                         TransNotes.From := from;
-                                        CreateTranNote();
                                     end;
                                 }
                                 textattribute(annotates)
@@ -90,7 +117,6 @@ xmlport 78602 "BAC Import Translation Target"
                                     TransNotes.Note := note;
                                     CreateTranNote();
                                 end;
-
                             }
                             fieldelement(target; Target.Target)
                             {
@@ -101,8 +127,9 @@ xmlport 78602 "BAC Import Translation Target"
                                 if ProjectCode = '' then
                                     error(MissingProjNameTxt);
                                 Target."Project Code" := ProjectCode;
+                                Target."Target Language ISO code" := TargetLangISOCode;
+                                Target."Target Language" := TargetLangCode;
                             end;
-
                         }
                     }
                 }
@@ -112,29 +139,25 @@ xmlport 78602 "BAC Import Translation Target"
 
     var
         ProjectCode: Code[10];
-        TargetLangCode: Text[10];
-        SourceLangCode: Text[10];
+        TargetLangCode: Code[10];
+        TargetLangISOCode: Text[10];
+        SourceLangISOCode: Text[10];
         MissingProjNameTxt: Label 'Project Name is Missing';
         TransNotes: Record "BAC Translation Notes";
-
-    trigger OnPostXmlPort()
-    var
+        TargetLanguage: Record "BAC Target Language";
+        TransTarget: Record "BAC Translation Target";
         TransProject: Record "BAC Translation Project Name";
-    begin
-        with TransProject do begin
-            get(ProjectCode);
-            "File Name" := currXMLport.Filename();
-            while (StrPos("File Name", '\') > 0) do
-                "File Name" := CopyStr("File Name", StrPos("File Name", '\') + 1);
-            Modify();
-        end;
-    end;
 
-    procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangCode: text[10]; inTargetLangCode: Text[10])
+    procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangISOCode: text[10]; inTargetLangISOCode: Text[10])
     begin
         ProjectCode := inProjectCode;
-        TargetLangCode := inTargetLangCode;
-        SourceLangCode := inSourceLangCode;
+        TransProject.Get(ProjectCode);
+        TargetLangISOCode := inTargetLangISOCode;
+        SourceLangISOCode := inSourceLangISOCode;
+        TargetLanguage.Setrange("Project Code", ProjectCode);
+        TargetLanguage.Setrange("Target Language ISO code", TargetLangISOCode);
+        TargetLanguage.findfirst;
+        TargetLangCode := TargetLanguage."Target Language";
     end;
 
     local procedure CreateTranNote()
