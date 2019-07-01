@@ -173,6 +173,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Target - Field xml:space - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2707830334 - Field 3419514631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Occurrencies</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Target - Field Occurrencies - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2492929245 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Target Language</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -303,20 +308,65 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Setup - Field Default Source Language code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 45736048 - Field 729173796 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use Free Google Translate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Setup - Field Use Free Google Translate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 45736048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 45736048 - Control 4105281732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 45736048 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Setup - Control GroupName - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 45736048 - Control 3205715915 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Languange to be defaulted on every project</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Setup - Control Default Source Language code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 45736048 - Control 729173796 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use the free Google API for translation. The limitation is that it is only possible to access the API a limited number of times each hour.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Setup - Control Use Free Google Translate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 45736048 - Control 1532816877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Numbering</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Setup - Control Numbering - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 45736048 - Control 3602357627 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series to be used with Projects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Setup - Control Project Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 827796721 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Translation Term</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Gen. Translation Term - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 827796721 - Field 101975653 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Target Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Gen. Translation Term - Field Target Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 827796721 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Gen. Translation Term - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 827796721 - Field 605026954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Term</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Gen. Translation Term - Field Term - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 827796721 - Field 1358710565 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Gen. Translation Term - Field Translation - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1793746527 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Project List</source>
@@ -429,7 +479,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Target List - Action Deselect All - Method OnAction - NamedType WarningTxt</note>
         </trans-unit>
         <trans-unit id="Page 1936724860 - Action 3697546316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Clear All translations</source>
+          <source>Clear All translations within filter</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Target List - Action Clear All translations - Property Caption</note>
         </trans-unit>
@@ -468,6 +518,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Trans Target Factbox - Control Instances - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2801054826 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translation Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Terms - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2801054826 - Control 605026954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enter the term to hardcode for translation. E.g. 'Journal' must be translated to 'Worksheet'. Every instance of the term will be replaced with the translation.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -477,6 +532,31 @@
           <source>Enter the translation to be inserted for the term. E.g. 'Journal' must be translated to 'Worksheet'. Every instance of the term will be replaced with the translation.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Terms - Control Translation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2801054826 - Action 148989252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy From General Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Terms - Action Copy From General Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2801054826 - Action 3466704859 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add to General Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Terms - Action Add to General Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1190705896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Translation Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Gen. Translation Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1190705896 - Control 605026954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter the term to hardcode for translation. E.g. 'Journal' must be translated to 'Worksheet'. Every instance of the term will be replaced with the translation.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Gen. Translation Terms - Control Term - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1190705896 - Control 1358710565 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter the translation to be inserted for the term. E.g. 'Journal' must be translated to 'Worksheet'. Every instance of the term will be replaced with the translation.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Gen. Translation Terms - Control Translation - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="XmlPort 3844023773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Import Translation Source</source>
@@ -517,16 +597,6 @@
           <source>Project Name is Missing</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Translation Target - NamedType MissingProjNameTxt</note>
-        </trans-unit>
-        <trans-unit id="XmlPort 714136975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import Translation Target</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Translation Target2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="XmlPort 714136975 - NamedType 1118720440" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Project Name is Missing</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Translation Target2 - NamedType MissingProjNameTxt</note>
         </trans-unit>
         <trans-unit id="TableExtension 1275041757 - Field 2423001612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ISO code</source>

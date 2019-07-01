@@ -22,6 +22,13 @@ table 78606 "BAC Translation Setup"
             Caption = 'Default Source Language code';
             TableRelation = Language;
         }
+        field(40; "Use Free Google Translate"; Boolean)
+        {
+            DataClassification = SystemMetadata;
+            Caption='Use Free Google Translate';
+            InitValue=true;
+            // To prepare for other translation API's
+        }
     }
 
     keys

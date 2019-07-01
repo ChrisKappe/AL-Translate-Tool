@@ -11,6 +11,7 @@ page 78605 "BAC Trans Target Factbox"
         {
             group(GroupName)
             {
+                ShowCaption = false;
                 field(Instances; Instances)
                 {
                     Caption = 'Instances';

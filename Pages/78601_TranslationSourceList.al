@@ -1,8 +1,6 @@
 page 78601 "BAC Translation Source List"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
     SourceTable = "BAC Translation Source";
 
     layout

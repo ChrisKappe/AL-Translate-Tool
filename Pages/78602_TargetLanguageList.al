@@ -1,8 +1,6 @@
 page 78602 "BAC Target Language List"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
     SourceTable = "BAC Target Language";
     Caption = 'Target Language List';
     PopulateAllFields = true;
@@ -13,24 +11,23 @@ page 78602 "BAC Target Language List"
         {
             repeater(GroupName)
             {
-                field("Project Code"; "Project Code")
-                {
-                    ApplicationArea = All;
 
-                }
                 field("Project Name"; "Project Name")
                 {
                     ApplicationArea = All;
+                    QuickEntry = false;
 
                 }
                 field("Source Language"; "Source Language")
                 {
                     ApplicationArea = All;
+                    QuickEntry = false;
 
                 }
                 field("Source Language ISO code"; "Source Language ISO code")
                 {
                     ApplicationArea = All;
+                    QuickEntry = false;
                 }
 
                 field("Target Language"; "Target Language")
@@ -40,6 +37,7 @@ page 78602 "BAC Target Language List"
                 field("Target Language ISO code"; "Target Language ISO code")
                 {
                     ApplicationArea = All;
+                    QuickEntry = false;
                 }
             }
         }
@@ -56,6 +54,7 @@ page 78602 "BAC Target Language List"
                 Image = Translate;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedIsBig = true;
                 RunObject = page "BAC Translation Target List";
                 RunPageLink = "Project Code" = field ("Project Code"),
                             "Target Language" = field ("Target Language"),
@@ -95,7 +94,7 @@ page 78602 "BAC Target Language List"
             {
                 ApplicationArea = All;
                 Caption = 'Import Target';
-                Image = ImportCodes;
+                Image = ImportLog;
                 Promoted = true;
                 PromotedOnly = true;
 

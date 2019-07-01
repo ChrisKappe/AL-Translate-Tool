@@ -4,8 +4,6 @@ page 78604 "BAC Translation Notes"
     SourceTable = "BAC Translation Notes";
     Caption = 'Translation Notes';
     Editable = false;
-    UsageCategory = Tasks;
-    ApplicationArea = all;
 
     layout
     {
