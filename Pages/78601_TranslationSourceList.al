@@ -31,20 +31,4 @@ page 78601 "BAC Translation Source List"
 
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
-            }
-        }
-    }
 }

@@ -66,6 +66,7 @@ xmlport 78602 "BAC Import Translation Target"
                         tableelement(Target; "BAC Translation Target")
                         {
                             XmlName = 'trans-unit';
+                            AutoReplace = true;
 
                             fieldattribute(id; Target."Trans-Unit Id")
                             {
@@ -170,6 +171,11 @@ xmlport 78602 "BAC Import Translation Target"
             if TransNotes.Insert() then;
             clear(TransNotes);
         end;
+    end;
+
+    procedure GetFileName(): Text;
+    begin
+        exit(currXMLport.Filename);
     end;
 }
 

@@ -5,6 +5,9 @@ page 78607 "BAC Translation Setup"
     UsageCategory = Administration;
     SourceTable = "BAC Translation Setup";
     Caption = 'Translation Setup';
+    InsertAllowed = false;
+    DeleteAllowed = false;
+    LinksAllowed = false;
 
     layout
     {

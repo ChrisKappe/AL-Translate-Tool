@@ -15,7 +15,7 @@ page 78600 "BAC Trans Project List"
                 field("Project Code"; "Project Code")
                 {
                     ApplicationArea = All;
-                                        AssistEdit=true;
+                    AssistEdit = true;
                     trigger OnAssistEdit();
                     begin
                         if AssistEdit then
@@ -72,6 +72,8 @@ page 78600 "BAC Trans Project List"
                     TransSource: Record "BAC Translation Source";
                     TransNotes: Record "BAC Translation Notes";
                     DeleteWarningTxt: Label 'This will overwrite the Translation source for %1';
+                    TransProject: Record "BAC Translation Project Name";
+                    ImportedTxt: Label 'The file %1 has been imported into project %2';
                 begin
                     TransSource.SetRange("Project Code", "Project Code");
                     if not TransSource.IsEmpty then
@@ -82,6 +84,8 @@ page 78600 "BAC Trans Project List"
                             exit;
                     ImportSourceXML.SetProjectCode(Rec."Project Code");
                     ImportSourceXML.Run();
+                    TransProject.Get("Project Code");
+                    message(ImportedTxt, TransProject."File Name", "Project Code");
                 end;
             }
         }

@@ -78,6 +78,7 @@ page 78602 "BAC Target Language List"
                 Image = ExportFile;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedIsBig = true;
                 trigger OnAction()
                 var
                     WarningTxt: Label 'Export the Translation file?';
@@ -97,21 +98,26 @@ page 78602 "BAC Target Language List"
                 Image = ImportLog;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedIsBig = true;
 
                 trigger OnAction()
                 var
                     ImportTargetXML: XmlPort "BAC Import Translation Target";
                     TransTarget: Record "BAC Translation Target";
-                    DeleteWarningTxt: Label 'This will overwrite the Translation target for %1';
+                    DeleteWarningTxt: Label 'This will overwrite existing Translation Target entries for %1';
+                    ImportedTxt: Label 'The file %1 has been imported into project %2';
+                    FileName: Text;
                 begin
                     TransTarget.SetRange("Project Code", "Project Code");
                     if not TransTarget.IsEmpty then
-                        if Confirm(DeleteWarningTxt, false, "Project Code") then begin
-                            TransTarget.DeleteAll();
-                        end else
+                        if not Confirm(DeleteWarningTxt, false, "Project Code") then
                             exit;
                     ImportTargetXML.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
                     ImportTargetXML.Run();
+                    FileName := ImportTargetXML.GetFileName();
+                    while (strpos(FileName, '\') > 0) do
+                        FileName := copystr(FileName, strpos(FileName, '\') + 1);
+                    message(ImportedTxt, FileName, "Project Code");
                 end;
             }
         }

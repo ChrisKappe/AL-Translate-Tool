@@ -383,6 +383,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Trans Project List - Action Import Source - Method OnAction - NamedType DeleteWarningTxt</note>
         </trans-unit>
+        <trans-unit id="Page 1793746527 - Action 287667028 - Method 1377591017 - NamedType 3681552984" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The file %1 has been imported into project %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Trans Project List - Action Import Source - Method OnAction - NamedType ImportedTxt</note>
+        </trans-unit>
         <trans-unit id="Page 1793746527 - Action 1374878138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Source</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -424,9 +429,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Target Language List - Action Import Target - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 698160755 - Action 1246357720 - Method 1377591017 - NamedType 2652709917" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This will overwrite the Translation target for %1</source>
+          <source>This will overwrite existing Translation Target entries for %1</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Target Language List - Action Import Target - Method OnAction - NamedType DeleteWarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 698160755 - Action 1246357720 - Method 1377591017 - NamedType 3681552984" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The file %1 has been imported into project %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Target Language List - Action Import Target - Method OnAction - NamedType ImportedTxt</note>
         </trans-unit>
         <trans-unit id="Page 1936724860 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Target List</source>
