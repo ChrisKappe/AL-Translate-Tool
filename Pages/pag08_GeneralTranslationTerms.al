@@ -11,6 +11,22 @@ page 78608 "BAC Gen. Translation Terms"
     {
         area(Content)
         {
+            group(Language)
+            {
+                field(LanguageFilter; LanguageFilter)
+                {
+                    Caption = 'Language Filter';
+                    TableRelation = Language where ("BAC ISO code" = filter ('<>'''''));
+                    trigger OnValidate()
+                    begin
+                        if LanguageFilter <> '' then
+                            SetFilter("Target Language", LanguageFilter)
+                        else
+                            SetRange("Target Language");
+                        CurrPage.Update(false);
+                    end;
+                }
+            }
             repeater(GroupName)
             {
                 field(Term; Term)
@@ -26,4 +42,7 @@ page 78608 "BAC Gen. Translation Terms"
             }
         }
     }
+    var
+        Language: Record Language;
+        LanguageFilter: Code[10];
 }

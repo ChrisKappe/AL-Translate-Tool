@@ -25,9 +25,19 @@ table 78606 "BAC Translation Setup"
         field(40; "Use Free Google Translate"; Boolean)
         {
             DataClassification = SystemMetadata;
-            Caption='Use Free Google Translate';
-            InitValue=true;
+            Caption = 'Use Free Google Translate';
+            InitValue = true;
             // To prepare for other translation API's
+        }
+        field(50; Logo; MediaSet)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Logo';
+        }
+        field(60; Version; Text[50])
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Version';
         }
     }
 

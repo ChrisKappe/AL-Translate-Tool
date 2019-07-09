@@ -21,11 +21,15 @@ page 78607 "BAC Translation Setup"
                     ApplicationArea = All;
                     ToolTip = 'Source Languange to be defaulted on every project';
                 }
+            }
+            group("Translate Tools")
+            {
                 field("Use Free Google Translate"; "Use Free Google Translate")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Use the free Google API for translation. The limitation is that it is only possible to access the API a limited number of times each hour.';
                 }
+
             }
             group(Numbering)
             {
@@ -37,6 +41,12 @@ page 78607 "BAC Translation Setup"
                 }
             }
         }
+        area(FactBoxes)
+        {
+            part(Logo; "BAC AL Logo FactBox")
+            {
+            }
+        }
     }
     trigger OnOpenPage()
     begin
@@ -44,5 +54,32 @@ page 78607 "BAC Translation Setup"
             init();
             Insert();
         end;
+        DownloadLogo();
+    end;
+
+    Procedure DownloadLogo()
+    var
+        TempBlob: Record TempBlob temporary;
+        InStr: InStream;
+    begin
+        if (Logo.Count() = 0) then begin
+            DownloadPicture('http://ba-consult.dk/downloads/Translate.jpg', TempBlob);
+            TempBlob.Blob.CreateInStream(InStr);
+            rec."Logo".ImportStream(InStr, 'Default image');
+            CurrPage.Update(true);
+        end;
+    end;
+
+    procedure DownloadPicture(Url: Text; var TempBlob: Record TempBlob temporary)
+    var
+        Client: HttpClient;
+        Response: HttpResponseMessage;
+        InStr: InStream;
+        OutStr: OutStream;
+    begin
+        Client.Get(Url, Response);
+        Response.Content().ReadAs(InStr);
+        TempBlob.Blob.CreateOutStream(OutStr);
+        CopyStream(OutStr, InStr);
     end;
 }
