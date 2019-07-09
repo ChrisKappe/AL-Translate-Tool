@@ -318,11 +318,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Setup - Field Logo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 45736048 - Field 237762718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Version</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Setup - Field Version - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 45736048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -587,6 +582,16 @@
           <source>About AL Translation Tool</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC About AL Translation Tool - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1679597293 - Control 3363114069 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>About AL Translation Tool</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About AL Translation Tool - Control About AL Translation Tool - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1679597293 - Control 3363114069 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open-Source AL Translate Tool. Source code can be located at https://github.com/peikba/AL-Translate-Tool.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About AL Translation Tool - Control About AL Translation Tool - Property InstructionalText</note>
         </trans-unit>
         <trans-unit id="Page 355888149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>AL Translation Tool</source>

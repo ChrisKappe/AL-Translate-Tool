@@ -34,11 +34,6 @@ table 78606 "BAC Translation Setup"
             DataClassification = SystemMetadata;
             Caption = 'Logo';
         }
-        field(60; Version; Text[50])
-        {
-            DataClassification = SystemMetadata;
-            Caption = 'Version';
-        }
     }
 
     keys
@@ -48,28 +43,4 @@ table 78606 "BAC Translation Setup"
             Clustered = true;
         }
     }
-
-    var
-        myInt: Integer;
-
-    trigger OnInsert()
-    begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
-    end;
-
 }

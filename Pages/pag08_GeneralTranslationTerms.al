@@ -2,7 +2,7 @@ page 78608 "BAC Gen. Translation Terms"
 {
     Caption = 'General Translation Terms';
     PageType = List;
-    SourceTable = "BAC Translation Term";
+    SourceTable = "BAC Gen. Translation Term";
     AutoSplitKey = true;
     UsageCategory = Tasks;
     ApplicationArea = All;
@@ -42,7 +42,9 @@ page 78608 "BAC Gen. Translation Terms"
             }
         }
     }
+
     var
         Language: Record Language;
         LanguageFilter: Code[10];
+
 }

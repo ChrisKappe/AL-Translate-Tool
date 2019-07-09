@@ -48,6 +48,22 @@ page 78607 "BAC Translation Setup"
             }
         }
     }
+
+    actions
+    {
+        area(Navigation)
+        {
+            action("About Al Translation Tool")
+            {
+                RunObject = page "BAC About AL Translation Tool";
+                Image = AboutNav;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+            }
+
+        }
+    }
     trigger OnOpenPage()
     begin
         if not get() then begin

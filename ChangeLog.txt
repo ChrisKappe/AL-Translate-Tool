@@ -9,6 +9,7 @@ Change log for the AL Translation Tool:
         - Changed all file names to comply with standard
         - Added warrenty txt file
         - page 78608 "BAC Gen. Translation Terms"      : Added filter on page
+                                                         Changed Source Table
         - page 78609 "BAC About AL Translation Tool"   : Added About page
         - page 78610 "BAC Logo FactBox"                : Added Logo FactBox
 

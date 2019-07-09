@@ -35,4 +35,10 @@ table 78607 "BAC Gen. Translation Term"
             Clustered = true;
         }
     }
+    
+    trigger OnInsert()
+    begin
+        TestField("Target Language");
+        TestField(Term);
+    end;
 }
