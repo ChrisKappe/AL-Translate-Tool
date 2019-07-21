@@ -68,6 +68,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Project Name - Field OrginalAttr - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2961263731 - Field 205365381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NAV Version</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Project Name - Field NAV Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2961263731 - Field 205365381 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dynamics NAV 2018,Dynamics 365 Business Central</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Project Name - Field NAV Version - Property OptionCaption</note>
+        </trans-unit>
         <trans-unit id="Table 3559158354 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Source</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -403,21 +413,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Trans Project List - Action Import Source - Method OnAction - NamedType ImportedTxt</note>
         </trans-unit>
-        <trans-unit id="Page 1793746527 - Action 604174437 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import Source NAV 2018</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Trans Project List - Action Import Source 2018 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1793746527 - Action 604174437 - Method 1377591017 - NamedType 2652709917" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This will overwrite the Translation source for %1</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Trans Project List - Action Import Source 2018 - Method OnAction - NamedType DeleteWarningTxt</note>
-        </trans-unit>
-        <trans-unit id="Page 1793746527 - Action 604174437 - Method 1377591017 - NamedType 3681552984" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The file %1 has been imported into project %2</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Trans Project List - Action Import Source 2018 - Method OnAction - NamedType ImportedTxt</note>
-        </trans-unit>
         <trans-unit id="Page 1793746527 - Action 1374878138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Source</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -542,16 +537,6 @@
           <source>Export the Translation file?</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Target List - Action Export Translation File - Method OnAction - NamedType WarningTxt</note>
-        </trans-unit>
-        <trans-unit id="Page 1936724860 - Action 899575150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export Translation File 2018</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Target List - Action Export Translation File 2018 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1936724860 - Action 899575150 - Method 1377591017 - NamedType 3492639454" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export the Translation file?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Target List - Action Export Translation File 2018 - Method OnAction - NamedType WarningTxt</note>
         </trans-unit>
         <trans-unit id="Page 1936724860 - Method 3089930585 - NamedType 149879980" size-unit="char" translate="yes" xml:space="preserve">
           <source>Converting #1###### of #2######</source>
@@ -697,6 +682,21 @@
           <source>Project Name is Missing</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Export Trans Target 2018 - NamedType MissingProjNameTxt</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2845693671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Translation Target 2018</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target 2018 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2845693671 - XmlPortNode 1251761246 - Method 1633929414 - NamedType 1474867470" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be %2 in file - The file %1 is %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target 2018 - XmlPortNode source-language - Method OnAfterAssignVariable - NamedType WrongSourceLangTxt</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2845693671 - NamedType 1118720440" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Name is Missing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target 2018 - NamedType MissingProjNameTxt</note>
         </trans-unit>
         <trans-unit id="TableExtension 1275041757 - Field 2423001612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ISO code</source>
