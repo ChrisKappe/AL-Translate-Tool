@@ -163,6 +163,17 @@ page 78603 "BAC Translation Target List"
                         TransTarget.ModifyAll(Target, '');
                 end;
             }
+            action("Translation Terms")
+            {
+                Caption = 'Translation Terms';
+                ApplicationArea = All;
+                Image = BeginningText;
+                Promoted = true;
+                PromotedOnly = true;
+                RunObject = page "BAC Translation terms";
+                RunPageLink = "Project Code" = field ("Project Code"),
+                            "Target Language" = field ("Target Language");
+            }
             action("Export Translation File")
             {
                 ApplicationArea = All;
@@ -174,26 +185,26 @@ page 78603 "BAC Translation Target List"
                 var
                     WarningTxt: Label 'Export the Translation file?';
                     ExportTranslation: XmlPort "BAC Export Translation Target";
+                    ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
                     TransProject: Record "BAC Translation Project Name";
                 begin
                     if Confirm(WarningTxt) then begin
                         TransProject.get("Project Code");
-                        ExportTranslation.SetProjectCode("Project Code", TransProject."Source Language ISO code", "Target Language ISO code");
-                        ExportTranslation.Run();
+                        case TransProject."NAV Version" of
+                            TransProject."NAV Version"::"Dynamics 365 Business Central":
+                                begin
+                                    ExportTranslation.SetProjectCode("Project Code", TransProject."Source Language ISO code", "Target Language ISO code");
+                                    ExportTranslation.Run();
+                                end;
+                            TransProject."NAV Version"::"Dynamics NAV 2018":
+                                begin
+                                    ExportTranslation2018.SetProjectCode("Project Code", TransProject."Source Language ISO code", "Target Language ISO code");
+                                    ExportTranslation2018.Run();
+                                end;
+                        end;
                     end;
                 end;
 
-            }
-            action("Translation Terms")
-            {
-                Caption = 'Translation Terms';
-                ApplicationArea = All;
-                Image = BeginningText;
-                Promoted = true;
-                PromotedOnly = true;
-                RunObject = page "BAC Translation terms";
-                RunPageLink = "Project Code" = field ("Project Code"),
-                            "Target Language" = field ("Target Language");
             }
         }
     }

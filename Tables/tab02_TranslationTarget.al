@@ -75,26 +75,30 @@ table 78602 "BAC Translation Target"
         }
         field(80; "size-unit"; Text[10])
         {
-            Caption='size-unit';
+            Caption = 'size-unit';
             DataClassification = AccountData;
         }
         field(90; "TranslateAttr"; Text[10])
         {
-            Caption='TranslateAttr';
+            Caption = 'TranslateAttr';
             DataClassification = AccountData;
         }
         field(100; "xml:space"; Text[10])
         {
-            Caption='xml:space';
+            Caption = 'xml:space';
             DataClassification = AccountData;
         }
-        field(110;"Occurrencies";Integer)
+        field(110; "Max Width"; Text[10])
         {
-            Caption='Occurrencies';
-            FieldClass=FlowField;
-            CalcFormula=count("BAC Translation Target" where(Source=field(Source)));
+            DataClassification = AccountData;
+            Caption = 'Max Width';
         }
-
+        field(120; "Occurrencies"; Integer)
+        {
+            Caption = 'Occurrencies';
+            FieldClass = FlowField;
+            CalcFormula = count ("BAC Translation Target" where (Source = field (Source)));
+        }
 
     }
 

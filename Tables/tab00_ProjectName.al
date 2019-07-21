@@ -95,6 +95,13 @@ table 78600 "BAC Translation Project Name"
             Caption = 'OrginalAttr';
             DataClassification = SystemMetadata;
         }
+        field(120; "NAV Version"; Option)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'NAV Version';
+            OptionMembers = "Dynamics NAV 2018","Dynamics 365 Business Central";
+            OptionCaption = 'Dynamics NAV 2018,Dynamics 365 Business Central';
+        }
 
     }
 

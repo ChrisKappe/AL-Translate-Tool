@@ -5,11 +5,11 @@ table 78601 "BAC Translation Source"
 
     fields
     {
-        field(5;"Line No.";Integer)
+        field(5; "Line No."; Integer)
         {
             DataClassification = SystemMetadata;
             Caption = 'Line No.';
-            AutoIncrement=true;
+            AutoIncrement = true;
         }
         field(10; "Project Code"; code[10])
         {
@@ -29,16 +29,23 @@ table 78601 "BAC Translation Source"
         field(80; "size-unit"; Text[10])
         {
             DataClassification = AccountData;
+            Caption='size-unit';
         }
         field(90; "TranslateAttr"; Text[10])
         {
             DataClassification = AccountData;
+            Caption='TranslateAttr';
         }
         field(100; "xml:space"; Text[10])
         {
             DataClassification = AccountData;
+            Caption='xml:space';
         }
-
+        field(110; "Max Width"; Text[10])
+        {
+            DataClassification = AccountData;
+            Caption = 'Max Width';
+        }
 
     }
 

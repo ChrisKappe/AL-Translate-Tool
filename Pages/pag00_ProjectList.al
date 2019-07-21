@@ -46,6 +46,10 @@ page 78600 "BAC Trans Project List"
                     ApplicationArea = All;
 
                 }
+                field("NAV Version"; "NAV Version")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
         area(Factboxes)
@@ -69,6 +73,7 @@ page 78600 "BAC Trans Project List"
                 trigger OnAction()
                 var
                     ImportSourceXML: XmlPort "BAC Import Translation Source";
+                    ImportSource2018XML: XmlPort "BAC Import Trans. Source 2018";
                     TransSource: Record "BAC Translation Source";
                     TransNotes: Record "BAC Translation Notes";
                     DeleteWarningTxt: Label 'This will overwrite the Translation source for %1';
@@ -82,8 +87,18 @@ page 78600 "BAC Trans Project List"
                             TransNotes.DeleteAll();
                         end else
                             exit;
-                    ImportSourceXML.SetProjectCode(Rec."Project Code");
-                    ImportSourceXML.Run();
+                    case "NAV Version" of
+                        "NAV Version"::"Dynamics 365 Business Central":
+                            begin
+                                ImportSourceXML.SetProjectCode(Rec."Project Code");
+                                ImportSourceXML.Run();
+                            end;
+                        "NAV Version"::"Dynamics NAV 2018":
+                            begin
+                                ImportSource2018XML.SetProjectCode(Rec."Project Code");
+                                ImportSource2018XML.Run();
+                            end;
+                    end;
                     TransProject.Get("Project Code");
                     message(ImportedTxt, TransProject."File Name", "Project Code");
                 end;

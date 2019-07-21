@@ -1,6 +1,6 @@
-xmlport 78600 "BAC Import Translation Source"
+xmlport 78603 "BAC Import Trans. Source 2018"
 {
-    Caption = 'Import Translation Source';
+    Caption = 'Import Translation Source 2018';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
@@ -10,7 +10,7 @@ xmlport 78600 "BAC Import Translation Source"
     PreserveWhiteSpace = true;
     UseDefaultNamespace = true;
     UseRequestPage = false;
-    UseLax=true;
+    UseLax = true;
 
     schema
     {
@@ -45,9 +45,6 @@ xmlport 78600 "BAC Import Translation Source"
                     end;
 
                 }
-                textattribute("target-language")
-                {
-                }
                 textattribute(original)
                 {
                     trigger OnAfterAssignVariable()
@@ -69,6 +66,9 @@ xmlport 78600 "BAC Import Translation Source"
                             XmlName = 'trans-unit';
 
                             fieldattribute(id; Source."Trans-Unit Id")
+                            {
+                            }
+                            fieldattribute("maxWidth"; Source."Max Width")
                             {
                             }
                             textattribute("size-unit")
@@ -138,6 +138,7 @@ xmlport 78600 "BAC Import Translation Source"
         MissingProjNameTxt: Label 'Project Name is Missing';
         TransNotes: Record "BAC Translation Notes";
         TransProject: Record "BAC Translation Project Name";
+        DummyMaxWidth: Text;
 
     trigger OnPostXmlPort()
     begin
